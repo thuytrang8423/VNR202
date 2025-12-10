@@ -61,6 +61,7 @@ body {
     color: var(--color-text-white);
     line-height: 1.6;
     overflow-x: hidden;
+    background: url('assets/background3.png') center top / cover no-repeat fixed;
     background-color: var(--color-text-dark);
 }
 
@@ -79,56 +80,18 @@ body {
 
 /* Video Background */
 .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    display: none;
 }
 
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(0, 0, 0, 0.3) 50%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
-    z-index: 2;
-}
-
-/* Placeholder background nếu chưa có video */
+.video-background video,
+.video-overlay,
 .placeholder-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-    z-index: 1;
+    display: none;
 }
 
 /* Bản đồ Việt Nam */
 .vietnam-map {
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 450px;
-    z-index: 3;
-    opacity: 1;
+    display: none;
 }
 
 .map-svg {
@@ -317,7 +280,6 @@ body {
     position: relative;
     min-height: 100vh;
     padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
-    background: url('assets/background2.jpg') center center / cover no-repeat;
     overflow: visible;
 }
 
